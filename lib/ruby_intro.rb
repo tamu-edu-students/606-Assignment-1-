@@ -13,9 +13,14 @@ def max_2_sum(arr)
 end
 
 def sum_to_n?(arr, number)
-  # YOUR CODE HERE
+  return false if arr.empty? || arr.length == 1
+  hash = {}
+  arr.each do |i|
+    return true if hash[number - i]
+    hash[i] = true
+  end
+  false
 end
-
 # Part 2
 
 def hello(name)
