@@ -28,7 +28,8 @@ def hello(name)
 end
 
 def starts_with_consonant?(string)
-  # YOUR CODE HERE
+  cons = string[0]
+  return cons+' is a consonant' if cons =~ /^[a-z]$/i && cons !~ /^[aeiou]$/i
 end
 
 def binary_multiple_of_4?(string)
